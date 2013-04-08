@@ -582,19 +582,19 @@ Public Class FrmMain
         BtnExit.ForeColor = Color.DarkBlue
     End Sub
 
-    Private Sub RBpng_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RBpng.CheckedChanged
+    Private Sub RBpng_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs)
         ImgFormat = 2
     End Sub
 
-    Private Sub RBjpg_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RBjpg.CheckedChanged
+    Private Sub RBjpg_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs)
         ImgFormat = 1
     End Sub
 
-    Private Sub RBgif_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RBgif.CheckedChanged
+    Private Sub RBgif_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs)
         ImgFormat = 3
     End Sub
 
-    Private Sub RBbmp_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RBbmp.CheckedChanged
+    Private Sub RBbmp_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs)
         ImgFormat = 0
     End Sub
 
@@ -619,7 +619,7 @@ Public Class FrmMain
     End Sub
 
 
-    Private Sub CmbKeys_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CmbKeys.SelectedIndexChanged
+    Private Sub CmbKeys_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs)
         If CmbKeys.SelectedIndex = 0 Then
             key = 44
         Else
@@ -628,7 +628,7 @@ Public Class FrmMain
     End Sub
 
 
-    Private Sub CBctrl_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CBctrl.CheckedChanged
+    Private Sub CBctrl_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs)
         If CBctrl.Checked = True Then
             isCtrl = True
         Else
@@ -637,7 +637,7 @@ Public Class FrmMain
 
     End Sub
 
-    Private Sub CBshift_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CBshift.CheckedChanged
+    Private Sub CBshift_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs)
 
         If CBshift.Checked = True Then
             isShift = True
@@ -647,7 +647,7 @@ Public Class FrmMain
 
     End Sub
 
-    Private Sub CBalt_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CBalt.CheckedChanged
+    Private Sub CBalt_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs)
         If CBalt.Checked = True Then
             isAlt = True
         Else
@@ -716,6 +716,15 @@ Public Class FrmMain
     End Sub
 
     Private Sub FrmMain_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+
+    End Sub
+
+    Private Sub GPSaveOption_Click(sender As Object, e As EventArgs) Handles GPSaveOption.Click
+
+    End Sub
+
+
+    Private Sub CheckBoxX3_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBoxX3.CheckedChanged
 
     End Sub
 End Class
