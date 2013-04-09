@@ -127,11 +127,13 @@ Public Class ViewFrm
         End If
     End Sub
 
-    Private Sub 关于_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles 关于.Click
-        FrmMain.showAbout()
-    End Sub
+
 
     Private Sub ButtonItem3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ButtonItem3.Click
         My.Computer.Clipboard.SetImage(bmp)
+    End Sub
+
+    Private Sub ButtonItem2_Click(sender As Object, e As EventArgs) Handles ButtonItem2.Click
+        System.Diagnostics.Process.Start("http://weibo.com/abeyuhang")
     End Sub
 End Class

@@ -1,4 +1,6 @@
 Imports System.Security.Principal
+Imports DevComponents.DotNetBar.Controls
+
 Public Class FrmMain
 
 
@@ -40,15 +42,13 @@ Public Class FrmMain
     Private screenDlg As ScreenCanvas = Nothing
 
     Private first As Boolean
-    Private Shared aboutFrm As FrmAbout = New FrmAbout
-
-    Private Shared Sub disAboutFrm()
-        aboutFrm.Dispose()
-    End Sub
+    
+   
     Private isCtrl, isAlt, isShift As Boolean
     Private hideAfterRun, hideWhenCapture As Boolean
     Private autoRun As Boolean
     Private isInAdmin As Boolean
+    Private delayNum As Integer
     Private drawRthread As Threading.Thread
     Public Sub New()
 
@@ -60,10 +60,12 @@ Public Class FrmMain
             isInAdmin = False
 
             Dim icon1 As New Icon(System.Drawing.SystemIcons.Shield, 24, 24)
-            CBAutoRun.Text = "   开机自动启动"
-            CBAutoRun.Image = icon1.ToBitmap
+            CBAutoRun.Text = "    开机自动启动"
+            PanelAutoRunImage.Visible = True
+            PanelAutoRunImage.BackgroundImage = icon1.ToBitmap
         Else
             CBAutoRun.Text = "开机自动启动"
+            PanelAutoRunImage.Visible = False
             isInAdmin = True
         End If
     End Sub
@@ -75,11 +77,7 @@ Public Class FrmMain
         e.Cancel = True
     End Sub
 
-    Public Shared Sub showAbout()
-        aboutFrm.TopMost = True
-        aboutFrm.ShowDialog()
-
-    End Sub
+    
     Private Sub initCmbKeys()
         CmbKeys.Items.Add("PrintScreen")
         Dim i As Integer
@@ -103,6 +101,8 @@ Public Class FrmMain
         reg.SetValue("shift", isShift)
         reg.SetValue("hideafterrun", hideAfterRun)
         reg.SetValue("autorun", autoRun)
+        reg.SetValue("delayNum", delayNum)
+
     End Sub
     Public Sub init()
         initCmbKeys()
@@ -125,9 +125,10 @@ Public Class FrmMain
             hideAfterRun = True
             hideWhenCapture = False
             autoRun = False
+            delayNum = 0
+
             saveReg()
             reg.Close()
-            first = True
         Else
             captureRegion = reg.GetValue("captureRegion")
             savepath = reg.GetValue("savepath")
@@ -140,11 +141,12 @@ Public Class FrmMain
             hideAfterRun = reg.GetValue("hideafterrun")
             hideWhenCapture = reg.GetValue("hidewhencapture")
             autoRun = reg.GetValue("autorun")
+            delayNum = reg.GetValue("delayNum")
             reg.Close()
 
 
         End If
-        CType(GPRegion.Controls(captureRegion), RadioButton).Checked = True
+        CType(GPRegion.Controls(captureRegion), CheckBoxX).Checked = True
 
         If savepath = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory) Then
             RBDesktop.Checked = True
@@ -167,6 +169,15 @@ Public Class FrmMain
         End If
         If autoRun = True Then
             CBAutoRun.Checked = True
+        End If
+        If delayNum > 0 Then
+            CBdelay.CheckValue = True
+            DelayNumTxt.Value = delayNum
+            DelayNumTxt.Enabled = True
+        Else
+            CBdelay.CheckValue = False
+            DelayNumTxt.Value = 0
+            DelayNumTxt.Enabled = False
         End If
         Select Case ImgFormat
             Case 0
@@ -191,39 +202,20 @@ Public Class FrmMain
         If hideWhenCapture Then
             CBHide.Checked = True
         End If
-        If first Or hideAfterRun Then
+        If hideAfterRun Then
             QuickCaptureNtf.ShowBalloonTip(10, "QuickCapture", "QuickCaputre已启动……", ToolTipIcon.Info)
         Else
             Me.Show()
         End If
 
-        'initialize crumbBar
-        Dim myComputer As New DevComponents.DotNetBar.CrumbBarItem()
-        myComputer.Text = "My Computer"
-        myComputer.Image = My.Resources.Resources.computer
-        CrumbBar1.Items.Add(myComputer)
-        ' Load disks, we will lazy load folders are disk are selected
-        Dim drives() As IO.DriveInfo = IO.DriveInfo.GetDrives()
-        For Each driveInfo As IO.DriveInfo In drives
-            If driveInfo.DriveType <> IO.DriveType.Fixed Then
-                Continue For
-            End If
-            Dim node As New DevComponents.DotNetBar.CrumbBarItem()
-            node.Tag = driveInfo
-            node.Text = "Local Disk " & driveInfo.Name.Replace("\", "")
-            node.Image = My.Resources.Resources.hdd
-            myComputer.SubItems.Add(node)
-        Next driveInfo
-        CrumbBar1.SelectedItem = myComputer
-        'end initialize crumbBar
-
+     
         'set hook
         acthook = New HookCore
         AddHandler acthook.MouseMove, New MouseEventHandler(AddressOf MyMouseMove)
         AddHandler acthook.KeyDown, New KeyEventHandler(AddressOf MyKeyDown)
         AddHandler acthook.MouseDown, New MouseEventHandler(AddressOf MyMouseDown)
         'end set hook
-        acthook.Start()
+        'acthook.Start()
         Capturing = False
         acthook.isCapturing = False
     End Sub
@@ -238,7 +230,6 @@ Public Class FrmMain
         saveReg()
         reg.Close()
         acthook.Stops()
-        disAboutFrm()
         If viewForm IsNot Nothing Then
             viewForm.Dispose()
         End If
@@ -506,57 +497,18 @@ Public Class FrmMain
 
     Private Sub RBDesktop_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RBDesktop.CheckedChanged
         savepath = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory)
-        CrumbBar1.Enabled = False
-        TextBox1.Enabled = False
+
     End Sub
 
     Private Sub RBUser_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RBUser.CheckedChanged
-        CrumbBar1.Enabled = True
-        TextBox1.Enabled = True
-        TextBox1.Text = savepath
+        SavePathTxt.Enabled = True
+        SavePathTxt.Text = savepath
     End Sub
 
-    Private Sub TextBox1_MouseEnter(ByVal sender As Object, ByVal e As System.EventArgs) Handles TextBox1.MouseEnter
-        TextBox1.Visible = False
-        CrumbBar1.Visible = True
+    
 
-    End Sub
+ 
 
-    Private Sub CrumbBar1_MouseLeave(ByVal sender As Object, ByVal e As System.EventArgs) Handles CrumbBar1.MouseLeave
-        CrumbBar1.Visible = False
-        TextBox1.Visible = True
-    End Sub
-
-
-    Private Sub CrumbBar1_SelectedItemChanged(ByVal sender As System.Object, ByVal e As DevComponents.DotNetBar.CrumbBarSelectionEventArgs) Handles CrumbBar1.SelectedItemChanged
-        Dim parent As DevComponents.DotNetBar.CrumbBarItem = e.NewSelectedItem
-        If parent Is Nothing OrElse parent.Name = "My Computer" Then
-            Return
-        End If
-
-        Dim dirInfo As IO.DirectoryInfo = Nothing
-        If TypeOf parent.Tag Is IO.DriveInfo Then
-            Dim driveInfo As IO.DriveInfo = CType(parent.Tag, IO.DriveInfo)
-            dirInfo = driveInfo.RootDirectory
-            savepath = driveInfo.Name
-
-        ElseIf TypeOf parent.Tag Is IO.DirectoryInfo Then
-            dirInfo = CType(parent.Tag, IO.DirectoryInfo)
-            savepath = dirInfo.FullName
-        End If
-        TextBox1.Text = savepath
-        If parent.SubItems.Count > 0 Then
-            Return
-        End If
-        Dim subDirectories() As IO.DirectoryInfo = dirInfo.GetDirectories()
-        For Each directoryInfo As IO.DirectoryInfo In subDirectories
-            Dim node As New DevComponents.DotNetBar.CrumbBarItem()
-            node.Tag = directoryInfo
-            node.Text = directoryInfo.Name
-            node.Image = My.Resources.Resources.folder
-            parent.SubItems.Add(node)
-        Next directoryInfo
-    End Sub
 
     Private Sub ButtonX1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         reg = My.Computer.Registry.CurrentUser
@@ -582,38 +534,35 @@ Public Class FrmMain
         BtnExit.ForeColor = Color.DarkBlue
     End Sub
 
-    Private Sub RBpng_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs)
+    Private Sub RBpng_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RBpng.CheckedChanged
         ImgFormat = 2
     End Sub
 
-    Private Sub RBjpg_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs)
+    Private Sub RBjpg_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RBjpg.CheckedChanged
         ImgFormat = 1
     End Sub
 
-    Private Sub RBgif_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs)
+    Private Sub RBgif_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RBgif.CheckedChanged
         ImgFormat = 3
     End Sub
 
-    Private Sub RBbmp_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs)
+    Private Sub RBbmp_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RBbmp.CheckedChanged
         ImgFormat = 0
     End Sub
 
     Private Sub RBview_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RBview.CheckedChanged
-        saveoption = 1
+        saveoption = 0
     End Sub
 
     Private Sub RBAutoSave_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RBAutoSave.CheckedChanged
-        saveoption = 0
+        saveoption = 1
     End Sub
 
     Private Sub QuickCaptureNtf_MouseDoubleClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles QuickCaptureNtf.MouseDoubleClick
         Me.Show()
     End Sub
 
-    Private Sub 关于ToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles 关于ToolStripMenuItem.Click
-        showAbout()
-    End Sub
-
+   
     Private Sub RBCopy_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RBCopy.CheckedChanged
         saveoption = 2
     End Sub
@@ -628,7 +577,7 @@ Public Class FrmMain
     End Sub
 
 
-    Private Sub CBctrl_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs)
+    Private Sub CBctrl_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CBctrl.CheckedChanged
         If CBctrl.Checked = True Then
             isCtrl = True
         Else
@@ -637,7 +586,7 @@ Public Class FrmMain
 
     End Sub
 
-    Private Sub CBshift_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs)
+    Private Sub CBshift_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CBshift.CheckedChanged
 
         If CBshift.Checked = True Then
             isShift = True
@@ -647,7 +596,7 @@ Public Class FrmMain
 
     End Sub
 
-    Private Sub CBalt_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs)
+    Private Sub CBalt_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CBalt.CheckedChanged
         If CBalt.Checked = True Then
             isAlt = True
         Else
@@ -715,16 +664,32 @@ Public Class FrmMain
         End If
     End Sub
 
-    Private Sub FrmMain_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+  
+
+    Private Sub LabelX4_Click(sender As Object, e As EventArgs) Handles LabelX4.Click
+        System.Diagnostics.Process.Start("http://weibo.com/abeyuhang")
+    End Sub
+
+    Private Sub FrmMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub
 
-    Private Sub GPSaveOption_Click(sender As Object, e As EventArgs) Handles GPSaveOption.Click
 
+    Private Sub CBdelay_CheckedChanged(sender As Object, e As EventArgs) Handles CBdelay.CheckedChanged
+        If CBdelay.Checked Then
+            If delayNum = 0 Then
+                delayNum = 1
+            End If
+            DelayNumTxt.Value = delayNum
+            DelayNumTxt.Enabled = True
+        Else
+            delayNum = 0
+            DelayNumTxt.Value = 0
+            DelayNumTxt.Enabled = False
+        End If
     End Sub
 
-
-    Private Sub CheckBoxX3_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBoxX3.CheckedChanged
-
+    Private Sub DelayNumTxt_ValueChanged(sender As Object, e As EventArgs) Handles DelayNumTxt.ValueChanged
+        delayNum = DelayNumTxt.Value
     End Sub
 End Class

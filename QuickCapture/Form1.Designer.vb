@@ -28,60 +28,57 @@ Partial Class FrmMain
         Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.开始捕获ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.显示设置ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.关于ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripSeparator()
         Me.退出ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PanelEx1 = New DevComponents.DotNetBar.PanelEx()
+        Me.GPRegion = New DevComponents.DotNetBar.Controls.GroupPanel()
+        Me.RBtnSelect = New DevComponents.DotNetBar.Controls.CheckBoxX()
+        Me.RBtnWinCtl = New DevComponents.DotNetBar.Controls.CheckBoxX()
+        Me.RBtnTop = New DevComponents.DotNetBar.Controls.CheckBoxX()
+        Me.RBtnDesk = New DevComponents.DotNetBar.Controls.CheckBoxX()
+        Me.GroupPanel1 = New DevComponents.DotNetBar.Controls.GroupPanel()
+        Me.PanelAutoRunImage = New System.Windows.Forms.Panel()
+        Me.CBAutoRun = New DevComponents.DotNetBar.Controls.CheckBoxX()
+        Me.CBHide = New DevComponents.DotNetBar.Controls.CheckBoxX()
+        Me.CBRunHide = New DevComponents.DotNetBar.Controls.CheckBoxX()
+        Me.DelayNumTxt = New DevComponents.Editors.IntegerInput()
+        Me.CBdelay = New DevComponents.DotNetBar.Controls.CheckBoxX()
+        Me.LabelX4 = New DevComponents.DotNetBar.LabelX()
         Me.BtnExit = New DevComponents.DotNetBar.ButtonX()
         Me.BtnBegin = New DevComponents.DotNetBar.ButtonX()
         Me.GPSaveOption = New DevComponents.DotNetBar.Controls.GroupPanel()
-        Me.CBRunHide = New System.Windows.Forms.CheckBox()
-        Me.CBAutoRun = New System.Windows.Forms.CheckBox()
-        Me.CBHide = New System.Windows.Forms.CheckBox()
-        Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.RBCopy = New System.Windows.Forms.RadioButton()
-        Me.RBAutoSave = New System.Windows.Forms.RadioButton()
-        Me.RBview = New System.Windows.Forms.RadioButton()
-        Me.GPKey = New DevComponents.DotNetBar.Controls.GroupPanel()
-        Me.ReflectionLabel1 = New DevComponents.DotNetBar.Controls.ReflectionLabel()
-        Me.CrumbBar1 = New DevComponents.DotNetBar.CrumbBar()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.RBUser = New System.Windows.Forms.RadioButton()
-        Me.RBDesktop = New System.Windows.Forms.RadioButton()
-        Me.GPRegion = New DevComponents.DotNetBar.Controls.GroupPanel()
-        Me.RBtnSelect = New System.Windows.Forms.RadioButton()
-        Me.RBtnWinCtl = New System.Windows.Forms.RadioButton()
-        Me.RBtnTop = New System.Windows.Forms.RadioButton()
-        Me.RBtnDesk = New System.Windows.Forms.RadioButton()
-        Me.RBgif = New System.Windows.Forms.RadioButton()
-        Me.RBpng = New System.Windows.Forms.RadioButton()
-        Me.RBjpg = New System.Windows.Forms.RadioButton()
-        Me.RBbmp = New System.Windows.Forms.RadioButton()
-        Me.Panel3 = New System.Windows.Forms.Panel()
-        Me.LabelX1 = New DevComponents.DotNetBar.LabelX()
-        Me.LabelX2 = New DevComponents.DotNetBar.LabelX()
-        Me.Panel4 = New System.Windows.Forms.Panel()
-        Me.TextBoxX1 = New DevComponents.DotNetBar.Controls.TextBoxX()
-        Me.CheckBoxX1 = New DevComponents.DotNetBar.Controls.CheckBoxX()
-        Me.TextBoxX2 = New DevComponents.DotNetBar.Controls.TextBoxX()
-        Me.LabelX4 = New DevComponents.DotNetBar.LabelX()
         Me.Panel5 = New System.Windows.Forms.Panel()
-        Me.GroupPanel1 = New DevComponents.DotNetBar.Controls.GroupPanel()
-        Me.CheckBoxX2 = New DevComponents.DotNetBar.Controls.CheckBoxX()
-        Me.CheckBoxX3 = New DevComponents.DotNetBar.Controls.CheckBoxX()
-        Me.CheckBoxX4 = New DevComponents.DotNetBar.Controls.CheckBoxX()
+        Me.SavePathTxt = New DevComponents.DotNetBar.Controls.TextBoxX()
+        Me.RBUser = New DevComponents.DotNetBar.Controls.CheckBoxX()
+        Me.RBDesktop = New DevComponents.DotNetBar.Controls.CheckBoxX()
+        Me.LabelX3 = New DevComponents.DotNetBar.LabelX()
+        Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.RBpng = New DevComponents.DotNetBar.Controls.CheckBoxX()
+        Me.RBgif = New DevComponents.DotNetBar.Controls.CheckBoxX()
+        Me.RBjpg = New DevComponents.DotNetBar.Controls.CheckBoxX()
+        Me.RBbmp = New DevComponents.DotNetBar.Controls.CheckBoxX()
+        Me.LabelX1 = New DevComponents.DotNetBar.LabelX()
+        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.RBCopy = New DevComponents.DotNetBar.Controls.CheckBoxX()
+        Me.RBview = New DevComponents.DotNetBar.Controls.CheckBoxX()
+        Me.RBAutoSave = New DevComponents.DotNetBar.Controls.CheckBoxX()
+        Me.LabelX2 = New DevComponents.DotNetBar.LabelX()
+        Me.GPKey = New DevComponents.DotNetBar.Controls.GroupPanel()
+        Me.CmbKeys = New DevComponents.DotNetBar.Controls.ComboBoxEx()
+        Me.CBalt = New DevComponents.DotNetBar.Controls.CheckBoxX()
+        Me.CBshift = New DevComponents.DotNetBar.Controls.CheckBoxX()
+        Me.CBctrl = New DevComponents.DotNetBar.Controls.CheckBoxX()
+        Me.ReflectionLabel1 = New DevComponents.DotNetBar.Controls.ReflectionLabel()
         Me.ContextMenuStrip1.SuspendLayout()
         Me.PanelEx1.SuspendLayout()
-        Me.GPSaveOption.SuspendLayout()
-        Me.Panel2.SuspendLayout()
-        Me.Panel1.SuspendLayout()
-        Me.GPKey.SuspendLayout()
         Me.GPRegion.SuspendLayout()
-        Me.Panel3.SuspendLayout()
-        Me.Panel4.SuspendLayout()
-        Me.Panel5.SuspendLayout()
         Me.GroupPanel1.SuspendLayout()
+        CType(Me.DelayNumTxt, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GPSaveOption.SuspendLayout()
+        Me.Panel5.SuspendLayout()
+        Me.Panel3.SuspendLayout()
+        Me.Panel2.SuspendLayout()
+        Me.GPKey.SuspendLayout()
         Me.SuspendLayout()
         '
         'QuickCaptureNtf
@@ -93,9 +90,9 @@ Partial Class FrmMain
         '
         'ContextMenuStrip1
         '
-        Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.开始捕获ToolStripMenuItem, Me.显示设置ToolStripMenuItem, Me.关于ToolStripMenuItem, Me.ToolStripMenuItem1, Me.退出ToolStripMenuItem})
+        Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.开始捕获ToolStripMenuItem, Me.显示设置ToolStripMenuItem, Me.ToolStripMenuItem1, Me.退出ToolStripMenuItem})
         Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
-        Me.ContextMenuStrip1.Size = New System.Drawing.Size(123, 98)
+        Me.ContextMenuStrip1.Size = New System.Drawing.Size(123, 76)
         '
         '开始捕获ToolStripMenuItem
         '
@@ -108,12 +105,6 @@ Partial Class FrmMain
         Me.显示设置ToolStripMenuItem.Name = "显示设置ToolStripMenuItem"
         Me.显示设置ToolStripMenuItem.Size = New System.Drawing.Size(122, 22)
         Me.显示设置ToolStripMenuItem.Text = "显示设置"
-        '
-        '关于ToolStripMenuItem
-        '
-        Me.关于ToolStripMenuItem.Name = "关于ToolStripMenuItem"
-        Me.关于ToolStripMenuItem.Size = New System.Drawing.Size(122, 22)
-        Me.关于ToolStripMenuItem.Text = "关于"
         '
         'ToolStripMenuItem1
         '
@@ -149,6 +140,240 @@ Partial Class FrmMain
         Me.PanelEx1.Style.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.ItemText
         Me.PanelEx1.Style.GradientAngle = 90
         Me.PanelEx1.TabIndex = 1
+        '
+        'GPRegion
+        '
+        Me.GPRegion.CanvasColor = System.Drawing.SystemColors.Control
+        Me.GPRegion.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007
+        Me.GPRegion.Controls.Add(Me.RBtnSelect)
+        Me.GPRegion.Controls.Add(Me.RBtnWinCtl)
+        Me.GPRegion.Controls.Add(Me.RBtnTop)
+        Me.GPRegion.Controls.Add(Me.RBtnDesk)
+        Me.GPRegion.Location = New System.Drawing.Point(9, 147)
+        Me.GPRegion.Margin = New System.Windows.Forms.Padding(2)
+        Me.GPRegion.Name = "GPRegion"
+        Me.GPRegion.Size = New System.Drawing.Size(121, 123)
+        '
+        '
+        '
+        Me.GPRegion.Style.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2
+        Me.GPRegion.Style.BackColorGradientAngle = 90
+        Me.GPRegion.Style.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground
+        Me.GPRegion.Style.BorderBottom = DevComponents.DotNetBar.eStyleBorderType.Solid
+        Me.GPRegion.Style.BorderBottomWidth = 1
+        Me.GPRegion.Style.BorderColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder
+        Me.GPRegion.Style.BorderLeft = DevComponents.DotNetBar.eStyleBorderType.Solid
+        Me.GPRegion.Style.BorderLeftWidth = 1
+        Me.GPRegion.Style.BorderRight = DevComponents.DotNetBar.eStyleBorderType.Solid
+        Me.GPRegion.Style.BorderRightWidth = 1
+        Me.GPRegion.Style.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid
+        Me.GPRegion.Style.BorderTopWidth = 1
+        Me.GPRegion.Style.CornerDiameter = 4
+        Me.GPRegion.Style.CornerType = DevComponents.DotNetBar.eCornerType.Rounded
+        Me.GPRegion.Style.TextColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText
+        Me.GPRegion.Style.TextLineAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Near
+        '
+        '
+        '
+        Me.GPRegion.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        '
+        '
+        '
+        Me.GPRegion.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.GPRegion.TabIndex = 1
+        Me.GPRegion.Text = "截取"
+        '
+        'RBtnSelect
+        '
+        '
+        '
+        '
+        Me.RBtnSelect.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.RBtnSelect.CheckBoxStyle = DevComponents.DotNetBar.eCheckBoxStyle.RadioButton
+        Me.RBtnSelect.Location = New System.Drawing.Point(9, 68)
+        Me.RBtnSelect.Name = "RBtnSelect"
+        Me.RBtnSelect.Size = New System.Drawing.Size(100, 23)
+        Me.RBtnSelect.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
+        Me.RBtnSelect.TabIndex = 7
+        Me.RBtnSelect.Text = "任意区域"
+        '
+        'RBtnWinCtl
+        '
+        '
+        '
+        '
+        Me.RBtnWinCtl.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.RBtnWinCtl.CheckBoxStyle = DevComponents.DotNetBar.eCheckBoxStyle.RadioButton
+        Me.RBtnWinCtl.Location = New System.Drawing.Point(9, 44)
+        Me.RBtnWinCtl.Name = "RBtnWinCtl"
+        Me.RBtnWinCtl.Size = New System.Drawing.Size(100, 23)
+        Me.RBtnWinCtl.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
+        Me.RBtnWinCtl.TabIndex = 6
+        Me.RBtnWinCtl.Text = "应用程序"
+        '
+        'RBtnTop
+        '
+        '
+        '
+        '
+        Me.RBtnTop.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.RBtnTop.CheckBoxStyle = DevComponents.DotNetBar.eCheckBoxStyle.RadioButton
+        Me.RBtnTop.Location = New System.Drawing.Point(9, 20)
+        Me.RBtnTop.Name = "RBtnTop"
+        Me.RBtnTop.Size = New System.Drawing.Size(100, 23)
+        Me.RBtnTop.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
+        Me.RBtnTop.TabIndex = 5
+        Me.RBtnTop.Text = "活动窗体"
+        '
+        'RBtnDesk
+        '
+        '
+        '
+        '
+        Me.RBtnDesk.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.RBtnDesk.CheckBoxStyle = DevComponents.DotNetBar.eCheckBoxStyle.RadioButton
+        Me.RBtnDesk.Location = New System.Drawing.Point(9, 1)
+        Me.RBtnDesk.Name = "RBtnDesk"
+        Me.RBtnDesk.Size = New System.Drawing.Size(100, 18)
+        Me.RBtnDesk.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
+        Me.RBtnDesk.TabIndex = 4
+        Me.RBtnDesk.Text = "整个桌面"
+        '
+        'GroupPanel1
+        '
+        Me.GroupPanel1.CanvasColor = System.Drawing.SystemColors.Control
+        Me.GroupPanel1.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007
+        Me.GroupPanel1.Controls.Add(Me.PanelAutoRunImage)
+        Me.GroupPanel1.Controls.Add(Me.CBAutoRun)
+        Me.GroupPanel1.Controls.Add(Me.CBHide)
+        Me.GroupPanel1.Controls.Add(Me.CBRunHide)
+        Me.GroupPanel1.Controls.Add(Me.DelayNumTxt)
+        Me.GroupPanel1.Controls.Add(Me.CBdelay)
+        Me.GroupPanel1.Location = New System.Drawing.Point(135, 52)
+        Me.GroupPanel1.Name = "GroupPanel1"
+        Me.GroupPanel1.Size = New System.Drawing.Size(355, 82)
+        '
+        '
+        '
+        Me.GroupPanel1.Style.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2
+        Me.GroupPanel1.Style.BackColorGradientAngle = 90
+        Me.GroupPanel1.Style.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground
+        Me.GroupPanel1.Style.BorderBottom = DevComponents.DotNetBar.eStyleBorderType.Solid
+        Me.GroupPanel1.Style.BorderBottomWidth = 1
+        Me.GroupPanel1.Style.BorderColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder
+        Me.GroupPanel1.Style.BorderLeft = DevComponents.DotNetBar.eStyleBorderType.Solid
+        Me.GroupPanel1.Style.BorderLeftWidth = 1
+        Me.GroupPanel1.Style.BorderRight = DevComponents.DotNetBar.eStyleBorderType.Solid
+        Me.GroupPanel1.Style.BorderRightWidth = 1
+        Me.GroupPanel1.Style.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid
+        Me.GroupPanel1.Style.BorderTopWidth = 1
+        Me.GroupPanel1.Style.CornerDiameter = 4
+        Me.GroupPanel1.Style.CornerType = DevComponents.DotNetBar.eCornerType.Rounded
+        Me.GroupPanel1.Style.TextAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Center
+        Me.GroupPanel1.Style.TextColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText
+        Me.GroupPanel1.Style.TextLineAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Near
+        '
+        '
+        '
+        Me.GroupPanel1.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        '
+        '
+        '
+        Me.GroupPanel1.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.GroupPanel1.TabIndex = 14
+        Me.GroupPanel1.Text = "程序选项"
+        '
+        'PanelAutoRunImage
+        '
+        Me.PanelAutoRunImage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PanelAutoRunImage.Location = New System.Drawing.Point(24, 32)
+        Me.PanelAutoRunImage.Name = "PanelAutoRunImage"
+        Me.PanelAutoRunImage.Size = New System.Drawing.Size(21, 21)
+        Me.PanelAutoRunImage.TabIndex = 16
+        '
+        'CBAutoRun
+        '
+        '
+        '
+        '
+        Me.CBAutoRun.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.CBAutoRun.Location = New System.Drawing.Point(8, 31)
+        Me.CBAutoRun.Name = "CBAutoRun"
+        Me.CBAutoRun.Size = New System.Drawing.Size(127, 24)
+        Me.CBAutoRun.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
+        Me.CBAutoRun.TabIndex = 15
+        Me.CBAutoRun.Text = "    开机自动启动"
+        '
+        'CBHide
+        '
+        '
+        '
+        '
+        Me.CBHide.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.CBHide.Location = New System.Drawing.Point(210, 8)
+        Me.CBHide.Name = "CBHide"
+        Me.CBHide.Size = New System.Drawing.Size(121, 19)
+        Me.CBHide.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
+        Me.CBHide.TabIndex = 15
+        Me.CBHide.Text = "截图时隐藏窗口"
+        '
+        'CBRunHide
+        '
+        '
+        '
+        '
+        Me.CBRunHide.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.CBRunHide.Location = New System.Drawing.Point(210, 29)
+        Me.CBRunHide.Name = "CBRunHide"
+        Me.CBRunHide.Size = New System.Drawing.Size(162, 24)
+        Me.CBRunHide.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
+        Me.CBRunHide.TabIndex = 15
+        Me.CBRunHide.Text = "启动后隐藏窗口"
+        '
+        'DelayNumTxt
+        '
+        '
+        '
+        '
+        Me.DelayNumTxt.BackgroundStyle.Class = "DateTimeInputBackground"
+        Me.DelayNumTxt.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.DelayNumTxt.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2
+        Me.DelayNumTxt.InputHorizontalAlignment = DevComponents.Editors.eHorizontalAlignment.Center
+        Me.DelayNumTxt.Location = New System.Drawing.Point(110, 6)
+        Me.DelayNumTxt.MaxValue = 300
+        Me.DelayNumTxt.MinValue = 1
+        Me.DelayNumTxt.Name = "DelayNumTxt"
+        Me.DelayNumTxt.ShowUpDown = True
+        Me.DelayNumTxt.Size = New System.Drawing.Size(61, 21)
+        Me.DelayNumTxt.TabIndex = 13
+        Me.DelayNumTxt.Value = 5
+        '
+        'CBdelay
+        '
+        '
+        '
+        '
+        Me.CBdelay.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.CBdelay.Location = New System.Drawing.Point(8, 3)
+        Me.CBdelay.Name = "CBdelay"
+        Me.CBdelay.Size = New System.Drawing.Size(176, 28)
+        Me.CBdelay.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
+        Me.CBdelay.TabIndex = 2
+        Me.CBdelay.Text = "延时截图(秒)："
+        '
+        'LabelX4
+        '
+        '
+        '
+        '
+        Me.LabelX4.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.LabelX4.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.LabelX4.Font = New System.Drawing.Font("微软雅黑", 9.0!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
+        Me.LabelX4.Location = New System.Drawing.Point(219, 16)
+        Me.LabelX4.Name = "LabelX4"
+        Me.LabelX4.Size = New System.Drawing.Size(81, 23)
+        Me.LabelX4.TabIndex = 13
+        Me.LabelX4.Text = "@白羊座小葛"
         '
         'BtnExit
         '
@@ -212,108 +437,223 @@ Partial Class FrmMain
         Me.GPSaveOption.TabIndex = 0
         Me.GPSaveOption.Text = "保存选项"
         '
-        'CBRunHide
+        'Panel5
         '
-        Me.CBRunHide.AutoSize = True
-        Me.CBRunHide.Font = New System.Drawing.Font("宋体", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
-        Me.CBRunHide.Location = New System.Drawing.Point(9, 8)
-        Me.CBRunHide.Margin = New System.Windows.Forms.Padding(2)
-        Me.CBRunHide.Name = "CBRunHide"
-        Me.CBRunHide.Size = New System.Drawing.Size(124, 18)
-        Me.CBRunHide.TabIndex = 12
-        Me.CBRunHide.Text = "启动后隐藏窗口"
-        Me.CBRunHide.UseVisualStyleBackColor = True
+        Me.Panel5.Controls.Add(Me.SavePathTxt)
+        Me.Panel5.Controls.Add(Me.RBUser)
+        Me.Panel5.Controls.Add(Me.RBDesktop)
+        Me.Panel5.Controls.Add(Me.LabelX3)
+        Me.Panel5.Location = New System.Drawing.Point(6, 36)
+        Me.Panel5.Name = "Panel5"
+        Me.Panel5.Size = New System.Drawing.Size(364, 31)
+        Me.Panel5.TabIndex = 18
         '
-        'CBAutoRun
+        'SavePathTxt
         '
-        Me.CBAutoRun.AutoSize = True
-        Me.CBAutoRun.Font = New System.Drawing.Font("宋体", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
-        Me.CBAutoRun.ImageAlign = System.Drawing.ContentAlignment.TopLeft
-        Me.CBAutoRun.Location = New System.Drawing.Point(210, 32)
-        Me.CBAutoRun.Margin = New System.Windows.Forms.Padding(2)
-        Me.CBAutoRun.Name = "CBAutoRun"
-        Me.CBAutoRun.Size = New System.Drawing.Size(124, 18)
-        Me.CBAutoRun.TabIndex = 11
-        Me.CBAutoRun.Text = "  开机自动启动"
-        Me.CBAutoRun.UseVisualStyleBackColor = True
         '
-        'CBHide
         '
-        Me.CBHide.AutoSize = True
-        Me.CBHide.Font = New System.Drawing.Font("宋体", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
-        Me.CBHide.Location = New System.Drawing.Point(210, 8)
-        Me.CBHide.Margin = New System.Windows.Forms.Padding(2)
-        Me.CBHide.Name = "CBHide"
-        Me.CBHide.Size = New System.Drawing.Size(124, 18)
-        Me.CBHide.TabIndex = 10
-        Me.CBHide.Text = "截图时隐藏窗口"
-        Me.CBHide.UseVisualStyleBackColor = True
+        '
+        Me.SavePathTxt.Border.Class = "TextBoxBorder"
+        Me.SavePathTxt.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.SavePathTxt.Location = New System.Drawing.Point(199, 4)
+        Me.SavePathTxt.Name = "SavePathTxt"
+        Me.SavePathTxt.Size = New System.Drawing.Size(132, 21)
+        Me.SavePathTxt.TabIndex = 15
+        '
+        'RBUser
+        '
+        '
+        '
+        '
+        Me.RBUser.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.RBUser.CheckBoxStyle = DevComponents.DotNetBar.eCheckBoxStyle.RadioButton
+        Me.RBUser.Location = New System.Drawing.Point(134, 3)
+        Me.RBUser.Name = "RBUser"
+        Me.RBUser.Size = New System.Drawing.Size(204, 23)
+        Me.RBUser.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
+        Me.RBUser.TabIndex = 14
+        Me.RBUser.Text = "自定义："
+        '
+        'RBDesktop
+        '
+        '
+        '
+        '
+        Me.RBDesktop.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.RBDesktop.CheckBoxStyle = DevComponents.DotNetBar.eCheckBoxStyle.RadioButton
+        Me.RBDesktop.Location = New System.Drawing.Point(75, 3)
+        Me.RBDesktop.Name = "RBDesktop"
+        Me.RBDesktop.Size = New System.Drawing.Size(53, 23)
+        Me.RBDesktop.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
+        Me.RBDesktop.TabIndex = 13
+        Me.RBDesktop.Text = "桌面"
+        '
+        'LabelX3
+        '
+        '
+        '
+        '
+        Me.LabelX3.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.LabelX3.Location = New System.Drawing.Point(4, 5)
+        Me.LabelX3.Name = "LabelX3"
+        Me.LabelX3.Size = New System.Drawing.Size(75, 23)
+        Me.LabelX3.TabIndex = 12
+        Me.LabelX3.Text = "保存路径："
+        '
+        'Panel3
+        '
+        Me.Panel3.Controls.Add(Me.RBpng)
+        Me.Panel3.Controls.Add(Me.RBgif)
+        Me.Panel3.Controls.Add(Me.RBjpg)
+        Me.Panel3.Controls.Add(Me.RBbmp)
+        Me.Panel3.Controls.Add(Me.LabelX1)
+        Me.Panel3.Location = New System.Drawing.Point(6, 67)
+        Me.Panel3.Name = "Panel3"
+        Me.Panel3.Size = New System.Drawing.Size(354, 30)
+        Me.Panel3.TabIndex = 17
+        '
+        'RBpng
+        '
+        '
+        '
+        '
+        Me.RBpng.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.RBpng.CheckBoxStyle = DevComponents.DotNetBar.eCheckBoxStyle.RadioButton
+        Me.RBpng.Location = New System.Drawing.Point(204, 4)
+        Me.RBpng.Name = "RBpng"
+        Me.RBpng.Size = New System.Drawing.Size(55, 23)
+        Me.RBpng.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
+        Me.RBpng.TabIndex = 5
+        Me.RBpng.Text = "PNG"
+        '
+        'RBgif
+        '
+        '
+        '
+        '
+        Me.RBgif.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.RBgif.CheckBoxStyle = DevComponents.DotNetBar.eCheckBoxStyle.RadioButton
+        Me.RBgif.Location = New System.Drawing.Point(276, 4)
+        Me.RBgif.Name = "RBgif"
+        Me.RBgif.Size = New System.Drawing.Size(55, 23)
+        Me.RBgif.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
+        Me.RBgif.TabIndex = 4
+        Me.RBgif.Text = "GIF"
+        '
+        'RBjpg
+        '
+        '
+        '
+        '
+        Me.RBjpg.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.RBjpg.CheckBoxStyle = DevComponents.DotNetBar.eCheckBoxStyle.RadioButton
+        Me.RBjpg.Location = New System.Drawing.Point(136, 4)
+        Me.RBjpg.Name = "RBjpg"
+        Me.RBjpg.Size = New System.Drawing.Size(55, 23)
+        Me.RBjpg.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
+        Me.RBjpg.TabIndex = 3
+        Me.RBjpg.Text = "JPG"
+        '
+        'RBbmp
+        '
+        '
+        '
+        '
+        Me.RBbmp.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.RBbmp.CheckBoxStyle = DevComponents.DotNetBar.eCheckBoxStyle.RadioButton
+        Me.RBbmp.Location = New System.Drawing.Point(75, 4)
+        Me.RBbmp.Name = "RBbmp"
+        Me.RBbmp.Size = New System.Drawing.Size(55, 23)
+        Me.RBbmp.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
+        Me.RBbmp.TabIndex = 2
+        Me.RBbmp.Text = "BMP"
+        '
+        'LabelX1
+        '
+        '
+        '
+        '
+        Me.LabelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.LabelX1.Location = New System.Drawing.Point(2, 6)
+        Me.LabelX1.Name = "LabelX1"
+        Me.LabelX1.Size = New System.Drawing.Size(76, 19)
+        Me.LabelX1.TabIndex = 1
+        Me.LabelX1.Text = "保存格式："
         '
         'Panel2
         '
+        Me.Panel2.Controls.Add(Me.RBCopy)
+        Me.Panel2.Controls.Add(Me.RBview)
+        Me.Panel2.Controls.Add(Me.RBAutoSave)
         Me.Panel2.Controls.Add(Me.LabelX2)
-        Me.Panel2.Controls.Add(Me.Panel1)
         Me.Panel2.Location = New System.Drawing.Point(6, 2)
         Me.Panel2.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(364, 30)
         Me.Panel2.TabIndex = 9
         '
-        'Panel1
-        '
-        Me.Panel1.Controls.Add(Me.RBCopy)
-        Me.Panel1.Controls.Add(Me.RBAutoSave)
-        Me.Panel1.Controls.Add(Me.RBview)
-        Me.Panel1.Location = New System.Drawing.Point(68, 5)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(2)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(286, 19)
-        Me.Panel1.TabIndex = 8
-        '
         'RBCopy
         '
-        Me.RBCopy.AutoSize = True
-        Me.RBCopy.Location = New System.Drawing.Point(164, 2)
-        Me.RBCopy.Margin = New System.Windows.Forms.Padding(2)
+        '
+        '
+        '
+        Me.RBCopy.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.RBCopy.CheckBoxStyle = DevComponents.DotNetBar.eCheckBoxStyle.RadioButton
+        Me.RBCopy.Location = New System.Drawing.Point(225, 3)
         Me.RBCopy.Name = "RBCopy"
-        Me.RBCopy.Size = New System.Drawing.Size(95, 16)
-        Me.RBCopy.TabIndex = 8
-        Me.RBCopy.TabStop = True
-        Me.RBCopy.Text = "复制到剪切板"
-        Me.RBCopy.UseVisualStyleBackColor = True
-        '
-        'RBAutoSave
-        '
-        Me.RBAutoSave.AutoSize = True
-        Me.RBAutoSave.Checked = True
-        Me.RBAutoSave.Location = New System.Drawing.Point(11, 2)
-        Me.RBAutoSave.Margin = New System.Windows.Forms.Padding(2)
-        Me.RBAutoSave.Name = "RBAutoSave"
-        Me.RBAutoSave.Size = New System.Drawing.Size(71, 16)
-        Me.RBAutoSave.TabIndex = 6
-        Me.RBAutoSave.TabStop = True
-        Me.RBAutoSave.Text = "自动保存"
-        Me.RBAutoSave.UseVisualStyleBackColor = True
+        Me.RBCopy.Size = New System.Drawing.Size(106, 23)
+        Me.RBCopy.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
+        Me.RBCopy.TabIndex = 12
+        Me.RBCopy.Text = "复制到剪贴板"
         '
         'RBview
         '
-        Me.RBview.AutoSize = True
-        Me.RBview.Location = New System.Drawing.Point(86, 2)
-        Me.RBview.Margin = New System.Windows.Forms.Padding(2)
+        '
+        '
+        '
+        Me.RBview.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.RBview.CheckBoxStyle = DevComponents.DotNetBar.eCheckBoxStyle.RadioButton
+        Me.RBview.Location = New System.Drawing.Point(75, 3)
         Me.RBview.Name = "RBview"
-        Me.RBview.Size = New System.Drawing.Size(71, 16)
-        Me.RBview.TabIndex = 7
-        Me.RBview.Text = "预览图片"
-        Me.RBview.UseVisualStyleBackColor = True
+        Me.RBview.Size = New System.Drawing.Size(54, 23)
+        Me.RBview.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
+        Me.RBview.TabIndex = 11
+        Me.RBview.Text = "预览"
+        '
+        'RBAutoSave
+        '
+        '
+        '
+        '
+        Me.RBAutoSave.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.RBAutoSave.CheckBoxStyle = DevComponents.DotNetBar.eCheckBoxStyle.RadioButton
+        Me.RBAutoSave.Location = New System.Drawing.Point(134, 4)
+        Me.RBAutoSave.Name = "RBAutoSave"
+        Me.RBAutoSave.Size = New System.Drawing.Size(91, 23)
+        Me.RBAutoSave.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
+        Me.RBAutoSave.TabIndex = 10
+        Me.RBAutoSave.Text = "自动保存"
+        '
+        'LabelX2
+        '
+        '
+        '
+        '
+        Me.LabelX2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.LabelX2.Location = New System.Drawing.Point(4, 6)
+        Me.LabelX2.Name = "LabelX2"
+        Me.LabelX2.Size = New System.Drawing.Size(72, 21)
+        Me.LabelX2.TabIndex = 9
+        Me.LabelX2.Text = "截图完成："
         '
         'GPKey
         '
         Me.GPKey.CanvasColor = System.Drawing.SystemColors.Control
         Me.GPKey.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007
-        Me.GPKey.Controls.Add(Me.CheckBoxX4)
-        Me.GPKey.Controls.Add(Me.CheckBoxX3)
-        Me.GPKey.Controls.Add(Me.CheckBoxX2)
-        Me.GPKey.Controls.Add(Me.TextBoxX1)
+        Me.GPKey.Controls.Add(Me.CmbKeys)
+        Me.GPKey.Controls.Add(Me.CBalt)
+        Me.GPKey.Controls.Add(Me.CBshift)
+        Me.GPKey.Controls.Add(Me.CBctrl)
         Me.GPKey.Location = New System.Drawing.Point(9, 52)
         Me.GPKey.Margin = New System.Windows.Forms.Padding(2)
         Me.GPKey.Name = "GPKey"
@@ -347,6 +687,57 @@ Partial Class FrmMain
         Me.GPKey.TabIndex = 2
         Me.GPKey.Text = "快捷键"
         '
+        'CmbKeys
+        '
+        Me.CmbKeys.DisplayMember = "Text"
+        Me.CmbKeys.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed
+        Me.CmbKeys.FormattingEnabled = True
+        Me.CmbKeys.ItemHeight = 15
+        Me.CmbKeys.Location = New System.Drawing.Point(54, 30)
+        Me.CmbKeys.Name = "CmbKeys"
+        Me.CmbKeys.Size = New System.Drawing.Size(60, 21)
+        Me.CmbKeys.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
+        Me.CmbKeys.TabIndex = 4
+        '
+        'CBalt
+        '
+        '
+        '
+        '
+        Me.CBalt.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.CBalt.Location = New System.Drawing.Point(9, 30)
+        Me.CBalt.Name = "CBalt"
+        Me.CBalt.Size = New System.Drawing.Size(44, 23)
+        Me.CBalt.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
+        Me.CBalt.TabIndex = 3
+        Me.CBalt.Text = "Alt"
+        '
+        'CBshift
+        '
+        '
+        '
+        '
+        Me.CBshift.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.CBshift.Location = New System.Drawing.Point(58, 4)
+        Me.CBshift.Name = "CBshift"
+        Me.CBshift.Size = New System.Drawing.Size(53, 23)
+        Me.CBshift.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
+        Me.CBshift.TabIndex = 2
+        Me.CBshift.Text = "Shift"
+        '
+        'CBctrl
+        '
+        '
+        '
+        '
+        Me.CBctrl.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.CBctrl.Location = New System.Drawing.Point(9, 4)
+        Me.CBctrl.Name = "CBctrl"
+        Me.CBctrl.Size = New System.Drawing.Size(49, 23)
+        Me.CBctrl.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
+        Me.CBctrl.TabIndex = 1
+        Me.CBctrl.Text = "Ctrl"
+        '
         'ReflectionLabel1
         '
         '
@@ -361,387 +752,6 @@ Partial Class FrmMain
         Me.ReflectionLabel1.TabIndex = 8
         Me.ReflectionLabel1.Text = "<b><font size=""+6""><i>Quick</i><font color=""#B02B2C"">Capture</font></font></b>"
         '
-        'CrumbBar1
-        '
-        '
-        '
-        '
-        Me.CrumbBar1.BackgroundStyle.BackColor = System.Drawing.Color.FromArgb(CType(CType(248, Byte), Integer), CType(CType(250, Byte), Integer), CType(CType(253, Byte), Integer))
-        Me.CrumbBar1.BackgroundStyle.BorderBottom = DevComponents.DotNetBar.eStyleBorderType.Solid
-        Me.CrumbBar1.BackgroundStyle.BorderBottomWidth = 1
-        Me.CrumbBar1.BackgroundStyle.BorderColor = System.Drawing.Color.FromArgb(CType(CType(83, Byte), Integer), CType(CType(89, Byte), Integer), CType(CType(94, Byte), Integer))
-        Me.CrumbBar1.BackgroundStyle.BorderColor2 = System.Drawing.Color.FromArgb(CType(CType(169, Byte), Integer), CType(CType(180, Byte), Integer), CType(CType(191, Byte), Integer))
-        Me.CrumbBar1.BackgroundStyle.BorderLeft = DevComponents.DotNetBar.eStyleBorderType.Solid
-        Me.CrumbBar1.BackgroundStyle.BorderLeftWidth = 1
-        Me.CrumbBar1.BackgroundStyle.BorderRight = DevComponents.DotNetBar.eStyleBorderType.Solid
-        Me.CrumbBar1.BackgroundStyle.BorderRightWidth = 1
-        Me.CrumbBar1.BackgroundStyle.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid
-        Me.CrumbBar1.BackgroundStyle.BorderTopWidth = 1
-        Me.CrumbBar1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.CrumbBar1.ContainerControlProcessDialogKey = True
-        Me.CrumbBar1.Location = New System.Drawing.Point(197, 5)
-        Me.CrumbBar1.Margin = New System.Windows.Forms.Padding(2)
-        Me.CrumbBar1.Name = "CrumbBar1"
-        Me.CrumbBar1.Size = New System.Drawing.Size(130, 20)
-        Me.CrumbBar1.TabIndex = 11
-        Me.CrumbBar1.Visible = False
-        '
-        'TextBox1
-        '
-        Me.TextBox1.Location = New System.Drawing.Point(197, 5)
-        Me.TextBox1.Margin = New System.Windows.Forms.Padding(2)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.ReadOnly = True
-        Me.TextBox1.Size = New System.Drawing.Size(130, 21)
-        Me.TextBox1.TabIndex = 10
-        '
-        'RBUser
-        '
-        Me.RBUser.AutoSize = True
-        Me.RBUser.Location = New System.Drawing.Point(134, 7)
-        Me.RBUser.Margin = New System.Windows.Forms.Padding(2)
-        Me.RBUser.Name = "RBUser"
-        Me.RBUser.Size = New System.Drawing.Size(65, 16)
-        Me.RBUser.TabIndex = 8
-        Me.RBUser.TabStop = True
-        Me.RBUser.Text = "自定义:"
-        Me.RBUser.UseVisualStyleBackColor = True
-        '
-        'RBDesktop
-        '
-        Me.RBDesktop.AutoSize = True
-        Me.RBDesktop.Location = New System.Drawing.Point(79, 6)
-        Me.RBDesktop.Margin = New System.Windows.Forms.Padding(2)
-        Me.RBDesktop.Name = "RBDesktop"
-        Me.RBDesktop.Size = New System.Drawing.Size(47, 16)
-        Me.RBDesktop.TabIndex = 7
-        Me.RBDesktop.TabStop = True
-        Me.RBDesktop.Text = "桌面"
-        Me.RBDesktop.UseVisualStyleBackColor = True
-        '
-        'GPRegion
-        '
-        Me.GPRegion.CanvasColor = System.Drawing.SystemColors.Control
-        Me.GPRegion.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007
-        Me.GPRegion.Controls.Add(Me.RBtnSelect)
-        Me.GPRegion.Controls.Add(Me.RBtnWinCtl)
-        Me.GPRegion.Controls.Add(Me.RBtnTop)
-        Me.GPRegion.Controls.Add(Me.RBtnDesk)
-        Me.GPRegion.Location = New System.Drawing.Point(9, 147)
-        Me.GPRegion.Margin = New System.Windows.Forms.Padding(2)
-        Me.GPRegion.Name = "GPRegion"
-        Me.GPRegion.Size = New System.Drawing.Size(121, 123)
-        '
-        '
-        '
-        Me.GPRegion.Style.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2
-        Me.GPRegion.Style.BackColorGradientAngle = 90
-        Me.GPRegion.Style.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground
-        Me.GPRegion.Style.BorderBottom = DevComponents.DotNetBar.eStyleBorderType.Solid
-        Me.GPRegion.Style.BorderBottomWidth = 1
-        Me.GPRegion.Style.BorderColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder
-        Me.GPRegion.Style.BorderLeft = DevComponents.DotNetBar.eStyleBorderType.Solid
-        Me.GPRegion.Style.BorderLeftWidth = 1
-        Me.GPRegion.Style.BorderRight = DevComponents.DotNetBar.eStyleBorderType.Solid
-        Me.GPRegion.Style.BorderRightWidth = 1
-        Me.GPRegion.Style.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid
-        Me.GPRegion.Style.BorderTopWidth = 1
-        Me.GPRegion.Style.CornerDiameter = 4
-        Me.GPRegion.Style.CornerType = DevComponents.DotNetBar.eCornerType.Rounded
-        Me.GPRegion.Style.TextColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText
-        Me.GPRegion.Style.TextLineAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Near
-        '
-        '
-        '
-        Me.GPRegion.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        '
-        '
-        '
-        Me.GPRegion.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.GPRegion.TabIndex = 1
-        Me.GPRegion.Text = "截取"
-        '
-        'RBtnSelect
-        '
-        Me.RBtnSelect.AutoSize = True
-        Me.RBtnSelect.Location = New System.Drawing.Point(9, 74)
-        Me.RBtnSelect.Margin = New System.Windows.Forms.Padding(2)
-        Me.RBtnSelect.Name = "RBtnSelect"
-        Me.RBtnSelect.Size = New System.Drawing.Size(71, 16)
-        Me.RBtnSelect.TabIndex = 3
-        Me.RBtnSelect.Text = "选择区域"
-        Me.RBtnSelect.UseVisualStyleBackColor = True
-        '
-        'RBtnWinCtl
-        '
-        Me.RBtnWinCtl.AutoSize = True
-        Me.RBtnWinCtl.Location = New System.Drawing.Point(9, 48)
-        Me.RBtnWinCtl.Margin = New System.Windows.Forms.Padding(2)
-        Me.RBtnWinCtl.Name = "RBtnWinCtl"
-        Me.RBtnWinCtl.Size = New System.Drawing.Size(83, 16)
-        Me.RBtnWinCtl.TabIndex = 2
-        Me.RBtnWinCtl.Text = "窗体或控件"
-        Me.RBtnWinCtl.UseVisualStyleBackColor = True
-        '
-        'RBtnTop
-        '
-        Me.RBtnTop.AutoSize = True
-        Me.RBtnTop.Location = New System.Drawing.Point(9, 25)
-        Me.RBtnTop.Margin = New System.Windows.Forms.Padding(2)
-        Me.RBtnTop.Name = "RBtnTop"
-        Me.RBtnTop.Size = New System.Drawing.Size(71, 16)
-        Me.RBtnTop.TabIndex = 1
-        Me.RBtnTop.Text = "活动窗体"
-        Me.RBtnTop.UseVisualStyleBackColor = True
-        '
-        'RBtnDesk
-        '
-        Me.RBtnDesk.AutoSize = True
-        Me.RBtnDesk.Checked = True
-        Me.RBtnDesk.Location = New System.Drawing.Point(9, 2)
-        Me.RBtnDesk.Margin = New System.Windows.Forms.Padding(2)
-        Me.RBtnDesk.Name = "RBtnDesk"
-        Me.RBtnDesk.Size = New System.Drawing.Size(71, 16)
-        Me.RBtnDesk.TabIndex = 0
-        Me.RBtnDesk.TabStop = True
-        Me.RBtnDesk.Text = "整个桌面"
-        Me.RBtnDesk.UseVisualStyleBackColor = True
-        '
-        'RBgif
-        '
-        Me.RBgif.AutoSize = True
-        Me.RBgif.Location = New System.Drawing.Point(218, 5)
-        Me.RBgif.Margin = New System.Windows.Forms.Padding(2)
-        Me.RBgif.Name = "RBgif"
-        Me.RBgif.Size = New System.Drawing.Size(41, 16)
-        Me.RBgif.TabIndex = 16
-        Me.RBgif.TabStop = True
-        Me.RBgif.Text = "GIF"
-        Me.RBgif.UseVisualStyleBackColor = True
-        '
-        'RBpng
-        '
-        Me.RBpng.AutoSize = True
-        Me.RBpng.Location = New System.Drawing.Point(144, 5)
-        Me.RBpng.Margin = New System.Windows.Forms.Padding(2)
-        Me.RBpng.Name = "RBpng"
-        Me.RBpng.Size = New System.Drawing.Size(41, 16)
-        Me.RBpng.TabIndex = 15
-        Me.RBpng.TabStop = True
-        Me.RBpng.Text = "PNG"
-        Me.RBpng.UseVisualStyleBackColor = True
-        '
-        'RBjpg
-        '
-        Me.RBjpg.AutoSize = True
-        Me.RBjpg.Location = New System.Drawing.Point(78, 5)
-        Me.RBjpg.Margin = New System.Windows.Forms.Padding(2)
-        Me.RBjpg.Name = "RBjpg"
-        Me.RBjpg.Size = New System.Drawing.Size(41, 16)
-        Me.RBjpg.TabIndex = 14
-        Me.RBjpg.TabStop = True
-        Me.RBjpg.Text = "JPG"
-        Me.RBjpg.UseVisualStyleBackColor = True
-        '
-        'RBbmp
-        '
-        Me.RBbmp.AutoSize = True
-        Me.RBbmp.Location = New System.Drawing.Point(14, 5)
-        Me.RBbmp.Margin = New System.Windows.Forms.Padding(2)
-        Me.RBbmp.Name = "RBbmp"
-        Me.RBbmp.Size = New System.Drawing.Size(41, 16)
-        Me.RBbmp.TabIndex = 13
-        Me.RBbmp.TabStop = True
-        Me.RBbmp.Text = "BMP"
-        Me.RBbmp.UseVisualStyleBackColor = True
-        '
-        'Panel3
-        '
-        Me.Panel3.Controls.Add(Me.Panel4)
-        Me.Panel3.Controls.Add(Me.LabelX1)
-        Me.Panel3.Location = New System.Drawing.Point(6, 67)
-        Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(354, 30)
-        Me.Panel3.TabIndex = 17
-        '
-        'LabelX1
-        '
-        '
-        '
-        '
-        Me.LabelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.LabelX1.Location = New System.Drawing.Point(2, 6)
-        Me.LabelX1.Name = "LabelX1"
-        Me.LabelX1.Size = New System.Drawing.Size(76, 19)
-        Me.LabelX1.TabIndex = 1
-        Me.LabelX1.Text = "保存格式："
-        '
-        'LabelX2
-        '
-        '
-        '
-        '
-        Me.LabelX2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.LabelX2.Location = New System.Drawing.Point(4, 6)
-        Me.LabelX2.Name = "LabelX2"
-        Me.LabelX2.Size = New System.Drawing.Size(72, 21)
-        Me.LabelX2.TabIndex = 9
-        Me.LabelX2.Text = "截图完成："
-        '
-        'Panel4
-        '
-        Me.Panel4.Controls.Add(Me.RBbmp)
-        Me.Panel4.Controls.Add(Me.RBgif)
-        Me.Panel4.Controls.Add(Me.RBjpg)
-        Me.Panel4.Controls.Add(Me.RBpng)
-        Me.Panel4.Location = New System.Drawing.Point(66, 2)
-        Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(284, 24)
-        Me.Panel4.TabIndex = 2
-        '
-        'TextBoxX1
-        '
-        '
-        '
-        '
-        Me.TextBoxX1.Border.Class = "TextBoxBorder"
-        Me.TextBoxX1.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.TextBoxX1.Location = New System.Drawing.Point(59, 31)
-        Me.TextBoxX1.Name = "TextBoxX1"
-        Me.TextBoxX1.Size = New System.Drawing.Size(44, 21)
-        Me.TextBoxX1.TabIndex = 0
-        '
-        'CheckBoxX1
-        '
-        '
-        '
-        '
-        Me.CheckBoxX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.CheckBoxX1.Location = New System.Drawing.Point(9, 26)
-        Me.CheckBoxX1.Name = "CheckBoxX1"
-        Me.CheckBoxX1.Size = New System.Drawing.Size(107, 28)
-        Me.CheckBoxX1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
-        Me.CheckBoxX1.TabIndex = 2
-        Me.CheckBoxX1.Text = "延时截图(秒)："
-        '
-        'TextBoxX2
-        '
-        '
-        '
-        '
-        Me.TextBoxX2.Border.Class = "TextBoxBorder"
-        Me.TextBoxX2.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.TextBoxX2.Location = New System.Drawing.Point(114, 30)
-        Me.TextBoxX2.Name = "TextBoxX2"
-        Me.TextBoxX2.Size = New System.Drawing.Size(42, 21)
-        Me.TextBoxX2.TabIndex = 3
-        '
-        'LabelX4
-        '
-        '
-        '
-        '
-        Me.LabelX4.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.LabelX4.Font = New System.Drawing.Font("微软雅黑", 9.0!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
-        Me.LabelX4.Location = New System.Drawing.Point(219, 16)
-        Me.LabelX4.Name = "LabelX4"
-        Me.LabelX4.Size = New System.Drawing.Size(81, 23)
-        Me.LabelX4.TabIndex = 13
-        Me.LabelX4.Text = "@白羊座小葛"
-        '
-        'Panel5
-        '
-        Me.Panel5.Controls.Add(Me.CrumbBar1)
-        Me.Panel5.Controls.Add(Me.RBDesktop)
-        Me.Panel5.Controls.Add(Me.TextBox1)
-        Me.Panel5.Controls.Add(Me.RBUser)
-        Me.Panel5.Location = New System.Drawing.Point(6, 36)
-        Me.Panel5.Name = "Panel5"
-        Me.Panel5.Size = New System.Drawing.Size(364, 31)
-        Me.Panel5.TabIndex = 18
-        '
-        'GroupPanel1
-        '
-        Me.GroupPanel1.CanvasColor = System.Drawing.SystemColors.Control
-        Me.GroupPanel1.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007
-        Me.GroupPanel1.Controls.Add(Me.CBRunHide)
-        Me.GroupPanel1.Controls.Add(Me.TextBoxX2)
-        Me.GroupPanel1.Controls.Add(Me.CBHide)
-        Me.GroupPanel1.Controls.Add(Me.CBAutoRun)
-        Me.GroupPanel1.Controls.Add(Me.CheckBoxX1)
-        Me.GroupPanel1.Location = New System.Drawing.Point(135, 52)
-        Me.GroupPanel1.Name = "GroupPanel1"
-        Me.GroupPanel1.Size = New System.Drawing.Size(355, 82)
-        '
-        '
-        '
-        Me.GroupPanel1.Style.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2
-        Me.GroupPanel1.Style.BackColorGradientAngle = 90
-        Me.GroupPanel1.Style.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground
-        Me.GroupPanel1.Style.BorderBottom = DevComponents.DotNetBar.eStyleBorderType.Solid
-        Me.GroupPanel1.Style.BorderBottomWidth = 1
-        Me.GroupPanel1.Style.BorderColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder
-        Me.GroupPanel1.Style.BorderLeft = DevComponents.DotNetBar.eStyleBorderType.Solid
-        Me.GroupPanel1.Style.BorderLeftWidth = 1
-        Me.GroupPanel1.Style.BorderRight = DevComponents.DotNetBar.eStyleBorderType.Solid
-        Me.GroupPanel1.Style.BorderRightWidth = 1
-        Me.GroupPanel1.Style.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid
-        Me.GroupPanel1.Style.BorderTopWidth = 1
-        Me.GroupPanel1.Style.CornerDiameter = 4
-        Me.GroupPanel1.Style.CornerType = DevComponents.DotNetBar.eCornerType.Rounded
-        Me.GroupPanel1.Style.TextAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Center
-        Me.GroupPanel1.Style.TextColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText
-        Me.GroupPanel1.Style.TextLineAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Near
-        '
-        '
-        '
-        Me.GroupPanel1.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        '
-        '
-        '
-        Me.GroupPanel1.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.GroupPanel1.TabIndex = 14
-        Me.GroupPanel1.Text = "程序选项"
-        '
-        'CheckBoxX2
-        '
-        '
-        '
-        '
-        Me.CheckBoxX2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.CheckBoxX2.Location = New System.Drawing.Point(9, 4)
-        Me.CheckBoxX2.Name = "CheckBoxX2"
-        Me.CheckBoxX2.Size = New System.Drawing.Size(100, 23)
-        Me.CheckBoxX2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
-        Me.CheckBoxX2.TabIndex = 1
-        Me.CheckBoxX2.Text = "Ctrl"
-        '
-        'CheckBoxX3
-        '
-        '
-        '
-        '
-        Me.CheckBoxX3.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.CheckBoxX3.Location = New System.Drawing.Point(59, 4)
-        Me.CheckBoxX3.Name = "CheckBoxX3"
-        Me.CheckBoxX3.Size = New System.Drawing.Size(55, 23)
-        Me.CheckBoxX3.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
-        Me.CheckBoxX3.TabIndex = 2
-        Me.CheckBoxX3.Text = "Shift"
-        '
-        'CheckBoxX4
-        '
-        '
-        '
-        '
-        Me.CheckBoxX4.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.CheckBoxX4.Location = New System.Drawing.Point(9, 30)
-        Me.CheckBoxX4.Name = "CheckBoxX4"
-        Me.CheckBoxX4.Size = New System.Drawing.Size(42, 23)
-        Me.CheckBoxX4.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled
-        Me.CheckBoxX4.TabIndex = 3
-        Me.CheckBoxX4.Text = "Alt"
-        '
         'FrmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
@@ -755,23 +765,17 @@ Partial Class FrmMain
         Me.MaximizeBox = False
         Me.Name = "FrmMain"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "s"
+        Me.Text = "QuickCapture"
         Me.ContextMenuStrip1.ResumeLayout(False)
         Me.PanelEx1.ResumeLayout(False)
-        Me.GPSaveOption.ResumeLayout(False)
-        Me.Panel2.ResumeLayout(False)
-        Me.Panel1.ResumeLayout(False)
-        Me.Panel1.PerformLayout()
-        Me.GPKey.ResumeLayout(False)
         Me.GPRegion.ResumeLayout(False)
-        Me.GPRegion.PerformLayout()
-        Me.Panel3.ResumeLayout(False)
-        Me.Panel4.ResumeLayout(False)
-        Me.Panel4.PerformLayout()
-        Me.Panel5.ResumeLayout(False)
-        Me.Panel5.PerformLayout()
         Me.GroupPanel1.ResumeLayout(False)
-        Me.GroupPanel1.PerformLayout()
+        CType(Me.DelayNumTxt, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GPSaveOption.ResumeLayout(False)
+        Me.Panel5.ResumeLayout(False)
+        Me.Panel3.ResumeLayout(False)
+        Me.Panel2.ResumeLayout(False)
+        Me.GPKey.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -780,47 +784,45 @@ Partial Class FrmMain
     Friend WithEvents 退出ToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents PanelEx1 As DevComponents.DotNetBar.PanelEx
     Friend WithEvents GPSaveOption As DevComponents.DotNetBar.Controls.GroupPanel
-    Friend WithEvents RBAutoSave As System.Windows.Forms.RadioButton
-    Friend WithEvents RBview As System.Windows.Forms.RadioButton
     Friend WithEvents GPRegion As DevComponents.DotNetBar.Controls.GroupPanel
-    Friend WithEvents RBtnSelect As System.Windows.Forms.RadioButton
-    Friend WithEvents RBtnWinCtl As System.Windows.Forms.RadioButton
-    Friend WithEvents RBtnTop As System.Windows.Forms.RadioButton
-    Friend WithEvents RBtnDesk As System.Windows.Forms.RadioButton
-    Friend WithEvents RBUser As System.Windows.Forms.RadioButton
-    Friend WithEvents RBDesktop As System.Windows.Forms.RadioButton
     Friend WithEvents ReflectionLabel1 As DevComponents.DotNetBar.Controls.ReflectionLabel
     Friend WithEvents GPKey As DevComponents.DotNetBar.Controls.GroupPanel
     Friend WithEvents BtnBegin As DevComponents.DotNetBar.ButtonX
-    Friend WithEvents 关于ToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ToolStripMenuItem1 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents 开始捕获ToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents 显示设置ToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
-    Friend WithEvents CrumbBar1 As DevComponents.DotNetBar.CrumbBar
     Friend WithEvents BtnExit As DevComponents.DotNetBar.ButtonX
     Friend WithEvents Panel2 As System.Windows.Forms.Panel
-    Friend WithEvents Panel1 As System.Windows.Forms.Panel
-    Friend WithEvents CBHide As System.Windows.Forms.CheckBox
-    Friend WithEvents CBAutoRun As System.Windows.Forms.CheckBox
-    Friend WithEvents RBCopy As System.Windows.Forms.RadioButton
-    Friend WithEvents CBRunHide As System.Windows.Forms.CheckBox
     Friend WithEvents Panel3 As System.Windows.Forms.Panel
-    Friend WithEvents Panel4 As System.Windows.Forms.Panel
-    Friend WithEvents RBbmp As System.Windows.Forms.RadioButton
-    Friend WithEvents RBgif As System.Windows.Forms.RadioButton
-    Friend WithEvents RBjpg As System.Windows.Forms.RadioButton
-    Friend WithEvents RBpng As System.Windows.Forms.RadioButton
     Friend WithEvents LabelX1 As DevComponents.DotNetBar.LabelX
     Friend WithEvents LabelX2 As DevComponents.DotNetBar.LabelX
     Friend WithEvents LabelX4 As DevComponents.DotNetBar.LabelX
-    Friend WithEvents TextBoxX2 As DevComponents.DotNetBar.Controls.TextBoxX
-    Friend WithEvents CheckBoxX1 As DevComponents.DotNetBar.Controls.CheckBoxX
-    Friend WithEvents TextBoxX1 As DevComponents.DotNetBar.Controls.TextBoxX
+    Friend WithEvents CBdelay As DevComponents.DotNetBar.Controls.CheckBoxX
     Friend WithEvents GroupPanel1 As DevComponents.DotNetBar.Controls.GroupPanel
     Friend WithEvents Panel5 As System.Windows.Forms.Panel
-    Friend WithEvents CheckBoxX3 As DevComponents.DotNetBar.Controls.CheckBoxX
-    Friend WithEvents CheckBoxX2 As DevComponents.DotNetBar.Controls.CheckBoxX
-    Friend WithEvents CheckBoxX4 As DevComponents.DotNetBar.Controls.CheckBoxX
+    Friend WithEvents CBshift As DevComponents.DotNetBar.Controls.CheckBoxX
+    Friend WithEvents CBctrl As DevComponents.DotNetBar.Controls.CheckBoxX
+    Friend WithEvents CBalt As DevComponents.DotNetBar.Controls.CheckBoxX
+    Friend WithEvents DelayNumTxt As DevComponents.Editors.IntegerInput
+    Friend WithEvents CBAutoRun As DevComponents.DotNetBar.Controls.CheckBoxX
+    Friend WithEvents CBHide As DevComponents.DotNetBar.Controls.CheckBoxX
+    Friend WithEvents CBRunHide As DevComponents.DotNetBar.Controls.CheckBoxX
+    Friend WithEvents RBtnSelect As DevComponents.DotNetBar.Controls.CheckBoxX
+    Friend WithEvents RBtnWinCtl As DevComponents.DotNetBar.Controls.CheckBoxX
+    Friend WithEvents RBtnTop As DevComponents.DotNetBar.Controls.CheckBoxX
+    Friend WithEvents RBtnDesk As DevComponents.DotNetBar.Controls.CheckBoxX
+    Friend WithEvents RBDesktop As DevComponents.DotNetBar.Controls.CheckBoxX
+    Friend WithEvents LabelX3 As DevComponents.DotNetBar.LabelX
+    Friend WithEvents RBCopy As DevComponents.DotNetBar.Controls.CheckBoxX
+    Friend WithEvents RBview As DevComponents.DotNetBar.Controls.CheckBoxX
+    Friend WithEvents RBAutoSave As DevComponents.DotNetBar.Controls.CheckBoxX
+    Friend WithEvents RBUser As DevComponents.DotNetBar.Controls.CheckBoxX
+    Friend WithEvents SavePathTxt As DevComponents.DotNetBar.Controls.TextBoxX
+    Friend WithEvents RBbmp As DevComponents.DotNetBar.Controls.CheckBoxX
+    Friend WithEvents RBpng As DevComponents.DotNetBar.Controls.CheckBoxX
+    Friend WithEvents RBgif As DevComponents.DotNetBar.Controls.CheckBoxX
+    Friend WithEvents RBjpg As DevComponents.DotNetBar.Controls.CheckBoxX
+    Friend WithEvents PanelAutoRunImage As System.Windows.Forms.Panel
+    Friend WithEvents CmbKeys As DevComponents.DotNetBar.Controls.ComboBoxEx
 
 End Class
